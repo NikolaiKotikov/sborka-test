@@ -1,6 +1,7 @@
 {% extends "../ext/base.nunjucks" %}
 
 {% from "../../components/button/button.nunjucks" import button %}
+{% from "../../components/steps/steps.nunjucks" import steps %}
 
 {# Пример расширения существующего блока #}
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
@@ -8,50 +9,10 @@
 
 {% block content %}
 
-		<main class="container">
-
-				<div style="padding:20px 0;">
-						{{ button({
-				className: '',
-				children: 'Buy Somethin',
-				chevronRight: true
-			}) }}
-				</div>
-
-				<div style="padding:20px 0;">
-
-						<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
-
-						<div class="row">
-								{% for i in range(1, 13) %}
-										<span>{{ i }}</span>
-								{% endfor %}
-						</div>
-
-				</div>
-
-				<div style="padding:20px 0;">
-
-						<h2 style="margin-bottom: 15px;">Пример с переменными:</h2>
-
-						{% for item in someData %}
-								<div style="margin-bottom: 15px;">
-										<h3>{{ item.title }}</h3>
-										<p>{{ item.text }}</p>
-								</div>
-						{% endfor %}
-
-				</div>
-
-				{# Пример с функциями #}
-				<p style="margin-bottom: 20px;">{{ addAwesome('Это текст для теста функций') }}</p>
-
-				{% if DEVELOP %}
-						<div class="debug" style="margin-bottom: 20px;">
-								<h2 style="margin-bottom: 15px;">Debug:</h2>
-								<p>Эта информация будет выводиться только при DEVELOP = true.</p>
-						</div>
-				{% endif %}
-
+		<main class="container main">
+				<section>
+						{{ steps({activeItem: 3, steps: [{title: 'Account'}, {title: 'Shipping'}, {title: 'Billing'}, {title: 'Review'}]}) }}
+				</section>
+				<section class="main__basket"></section>
 		</main>
 {% endblock content %}

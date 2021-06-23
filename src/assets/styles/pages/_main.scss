@@ -1,0 +1,10 @@
+.main {
+	@include media('>=tablet') {
+		display: grid;
+		grid-template-columns: 1fr 410px;
+	}
+}
+
+.main__basket {
+	border-left: 1px solid $secondary;
+}

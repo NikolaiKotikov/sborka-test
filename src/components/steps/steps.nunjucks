@@ -1,0 +1,11 @@
+{% from '../circle/circle.nunjucks' import circle %}
+{% macro steps(props) %}
+		<ul class="steps">
+				{% for step in props.steps %}
+						<li style="z-index:{{ loop.length - loop.index }}" class="steps__item {% if loop.index < props.activeItem %} steps__item--passed {% elseif loop.index > props.activeItem %} steps__item--disabled {% else %} steps__item--active {% endif %}">
+								{{ circle({children: loop.index, className: "steps__circle circle--large "}) }}
+								<span>{{step.title}}</span>
+						</li>
+				{% endfor %}
+		</ul>
+{% endmacro %}

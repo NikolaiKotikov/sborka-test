@@ -15,7 +15,7 @@
 						<link rel="stylesheet" href="assets/css/styles.css?hash"/>
 				{% endblock stylesheets %}
 		</head>
-		<body>
+		<body class="page">
 				{% include '../../components/header/header.nunjucks' %}
 
 				{% block content %}{% endblock content %}
