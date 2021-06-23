@@ -11,7 +11,7 @@ export default {
 	},
 	src: {
 		templates: './src/',
-		nunj: 'src/templates/pages/**/*.nunj',
+		nunj: 'src/templates/pages/**/*.nunjucks',
 		scripts: 'src/assets/js/index.js',
 		styles: 'src/assets/styles/styles.scss',
 		images: 'src/assets/images/**/*.*',
@@ -22,7 +22,7 @@ export default {
 		videos: 'src/assets/video/**/*.*',
 	},
 	watch: {
-		nunj: ['src/**/*.nunj', 'global-data.json'],
+		nunj: ['src/**/*.nunjucks', 'global-data.json'],
 		scripts: 'src/**/*.js',
 		styles: 'src/**/*.scss',
 		images: 'src/assets/images/**/*.*',

@@ -58,6 +58,7 @@
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^8.0.0",
+    "include-media": "^1.4.10",
     "jquery": "^3.4.1",
     "json-loader": "^0.5.7",
     "lint-staged": "^10.0.8",

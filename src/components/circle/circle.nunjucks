@@ -1,0 +1,5 @@
+{% macro circle(props) %}
+		<span class="circle{% if props.className %} {{ props.className }}{% endif %}">
+				{{ props.children }}
+		</span>
+{% endmacro %}

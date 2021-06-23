@@ -1,4 +1,29 @@
 .header {
-	padding: 20px 0;
-	background: #ccc;
+	display: flex;
+	border-bottom: 1px solid $secondary;
+	min-height: 80px;
+
+	@include not-phones-and-tablets {
+		@include hover-secondary;
+	}
+}
+
+.header__container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding-right: 30px;
+	padding-left: 30px;
+
+	& > *:not(.header__menu) {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
 }

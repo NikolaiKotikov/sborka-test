@@ -1,0 +1,4 @@
+<div class="site-controls">
+		{% include '../search/search.nunjucks' %}
+		{% include '../basket/basket.nunjucks' %}
+</div>

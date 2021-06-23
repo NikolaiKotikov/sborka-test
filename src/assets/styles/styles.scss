@@ -9,7 +9,12 @@
 
 // ======= COMPONENTS =======
 @import '../../components/header/header';
+@import '../../components/menu/menu.scss';
 @import '../../components/button/button';
+@import '../../components/site-controls/site-controls.scss';
+@import '../../components/search/search.scss';
+@import '../../components/circle/circle.scss';
+@import '../../components/basket/basket.scss';
 
 // ======= PAGES =======
 @import 'pages/main';

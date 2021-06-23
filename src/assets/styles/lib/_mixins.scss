@@ -288,3 +288,20 @@
 		@content;
 	}
 }
+
+@mixin hover-secondary {
+		a,
+		button {
+			transition: color $default-transition-duration $default-transition-function;
+		}
+		path, g {
+			transition: fill $default-transition-duration $default-transition-function;
+		}
+		a:hover,
+		button:hover {
+			color: $secondary;
+			path, g {
+				fill: $secondary;
+			}
+		}
+}
