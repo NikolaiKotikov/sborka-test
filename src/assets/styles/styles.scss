@@ -10,7 +10,7 @@
 // ======= COMPONENTS =======
 @import '../../components/header/header';
 @import '../../components/menu/menu.scss';
-@import '../../components/button/button';
+// @import '../../components/button/button';
 @import '../../components/site-controls/site-controls.scss';
 @import '../../components/search/search.scss';
 @import '../../components/circle/circle.scss';
@@ -21,5 +21,7 @@
 @import '../../components/card/card.scss';
 @import '../../components/base/field/field.scss';
 @import '../../components/base/checkbox/checkbox.scss';
+@import '../../components/order-controls/order-controls.scss';
+@import '../../components/base/button/button.scss';
 // ======= PAGES =======
 @import 'pages/main';
