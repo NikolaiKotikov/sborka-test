@@ -1,0 +1,7 @@
+{% macro checkbox(props) %}
+		<label class="checkbox">
+				<input class="checkbox__input sr-only" type="checkbox" {{props.settings}}>
+				<span class="checkbox__box"></span>
+				{{caller()}}
+		</label>
+{% endmacro %}

@@ -1,0 +1,13 @@
+{% macro radio(props) %}
+		<label class="radio">
+				<input class="radio__input sr-only" type="radio" {{props.settings}}>
+				<span class="radio__box"></span>
+				{%if props.label%}
+						<span>
+								{{props.label}}
+						</span>
+						{%else%}
+						{% include '../../paypal/paypal.njk' %}
+						{%endif%}
+				</label>
+		{% endmacro %}

@@ -1,0 +1,16 @@
+{% from '../base/field/field.njk' import field %}
+{% macro card(props) %}
+		<div class="card{% if props.className %} {{ props.className }}{% endif %}">
+				{{field({settings: 'type="text" placeholder="Placeholder Text"', label: 'Name on card'})}}
+				<div class="card__number">
+						{{field({settings: 'type="number"', label: 'Card number', sr: 'first 4 digits'})}}
+						{{field({settings: 'type="number"', sr: 'second 4 digits'})}}
+						{{field({settings: 'type="number"', sr: 'third 4 digits'})}}
+						{{field({settings: 'type="number"', sr: 'fourth 4 digits'})}}
+				</div>
+				<div class="card__info">
+						{{field({settings: 'type="number"', label: 'Expire date'})}}
+						{{field({settings: 'type="number"', label: 'CVV code', tip: '?'})}}
+				</div>
+		</div>
+{% endmacro %}

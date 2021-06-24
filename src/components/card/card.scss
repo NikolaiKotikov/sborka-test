@@ -1,0 +1,20 @@
+.card {
+	width: 550px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	padding-bottom: 45px;
+	border: 1px solid $secondary;
+	box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+	display: grid;
+	row-gap: 20px;
+}
+
+.card__number,
+.card__info {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 30px;
+	align-items: end;
+}

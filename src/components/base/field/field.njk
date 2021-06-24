@@ -1,0 +1,17 @@
+{% macro field(props)%}
+		<label class="field">
+				{% if props.label %}
+						<span class="field__label">
+								{{props.label}}
+								{% if props.tip %}
+										{% from "../../circle/circle.njk" import circle %}
+										{{circle({className: 'field__tip', children: props.tip})}}
+								{% endif %}
+						</span>
+				{% endif %}
+				{% if props.sr %}
+						<span class="sr-only">{{props.sr}}</span>
+				{% endif %}
+				<input class="field__input" {{props.settings}}>
+		</label>
+{% endmacro %}

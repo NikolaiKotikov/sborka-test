@@ -1,3 +1,23 @@
-<form action="/" method="POST" class="billing">
+{% from '../base/radio/radio.njk' import radio %}
+{% from "../base/checkbox/checkbox.njk" import checkbox %}
+{% from "../card/card.njk" import card %}
+<form action="/" method="POST" class="billing order-inner">
 		<h2 class="billing__title">Billing Information</h2>
+		<div class="billing__options">
+				{{radio({settings: 'checked name="pay" value="credit-card"', label: 'Pay with Credit Card'})}}
+				{{radio({settings: 'name="pay" value="paypal"'})}}
+		</div>
+		{{card({className: 'billing__card'})}}
+		<div class="billing__confirm">
+				{% call checkbox({settings: 'checked'}) %}
+				<span>Save information of this credit card</span>
+				{% endcall %}
+				{% call checkbox() %}
+				<span>I accept the
+						<a class="billing__link" href="#">terms and conditions</a>
+						and the
+						<a class="billing__link" href="#">Privacy Policies</a>
+				</span>
+				{% endcall %}
+		</div>
 </form>

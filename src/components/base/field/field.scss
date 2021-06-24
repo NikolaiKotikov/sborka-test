@@ -1,0 +1,32 @@
+.field__label {
+	position: relative;
+	padding-right: 20px;
+	font-weight: $medium;
+	color: #555770;
+	line-height: 2;
+}
+.field__input {
+	width: 100%;
+	border-radius: 3px;
+	background: #ededf1;
+	height: 40px;
+	border: none;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	&::placeholder {
+		color: #8e90a6;
+		opacity: 1;
+	}
+}
+
+.field__tip {
+	--background: #dbdbdb;
+	--border-color: var(--background);
+	color: black;
+
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	cursor: pointer;
+}
