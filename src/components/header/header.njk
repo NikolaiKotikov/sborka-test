@@ -1,11 +1,11 @@
-{% from "../../components/menu/menu.nunjucks" import menu %}
+{% from "../../components/menu/menu.njk" import menu %}
 <header class="header">
 		<div class="container header__container">
 				<a href="#" class="header__logo">
-						{% include '../logo/logo.nunjucks' %}
+						{% include '../logo/logo.njk' %}
 						<span class="sr-only">Site Logo</span>
 				</a>
 				{{ menu({className: 'header__menu'}) }}
-				{% include '../site-controls/site-controls.nunjucks' %}
+				{% include '../site-controls/site-controls.njk' %}
 		</div>
 </header>

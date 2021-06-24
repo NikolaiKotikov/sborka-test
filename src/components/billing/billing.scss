@@ -1,0 +1,12 @@
+.billing {
+	@include media('>=desktop') {
+		padding-left: 270px;
+	}
+	@include media('<desktop') {
+		padding-left: 50px;
+	}
+}
+.billing__title {
+	font-size: 18px;
+	font-weight: $bold;
+}

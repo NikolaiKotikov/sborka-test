@@ -1,7 +1,7 @@
-{% extends "../ext/base.nunjucks" %}
+{% extends "../ext/base.njk" %}
 
-{% from "../../components/button/button.nunjucks" import button %}
-{% from "../../components/steps/steps.nunjucks" import steps %}
+{% from "../../components/button/button.njk" import button %}
+{% from "../../components/steps/steps.njk" import steps %}
 
 {# Пример расширения существующего блока #}
 {# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
@@ -12,6 +12,7 @@
 		<main class="container main">
 				<section>
 						{{ steps({activeItem: 3, steps: [{title: 'Account'}, {title: 'Shipping'}, {title: 'Billing'}, {title: 'Review'}]}) }}
+						{% include "../../components/billing/billing.njk" %}
 				</section>
 				<section class="main__basket"></section>
 		</main>
