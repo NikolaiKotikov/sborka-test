@@ -1,0 +1,9 @@
+{% from "../base/field/field.njk" import field %}
+{% from "../base/button/button.njk" import button %}
+<div class="promo basket-inner">
+		<h2 class="promo__title h2">Promo code</h2>
+		<div class="promo__controls">
+				{{field({settings: 'placeholder="Placehodler Text"', sr: 'enter promo code'})}}
+				{{button({children: 'Apply'})}}
+		</div>
+</div>

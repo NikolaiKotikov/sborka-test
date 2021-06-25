@@ -1,22 +1,22 @@
 {% extends "../ext/base.njk" %}
 
-{% from "../../components/button/button.njk" import button %}
 {% from "../../components/steps/steps.njk" import steps %}
-
-{# Пример расширения существующего блока #}
-{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
-{# {% block title %}Home / {{ super() }}{% endblock title %} #}
 
 {% block content %}
 
-		<main class="container main">
-				<section>
-						{{ steps({activeItem: 3, steps: [{title: 'Account'}, {title: 'Shipping'}, {title: 'Billing'}, {title: 'Review'}]}) }}
-						{% include "../../components/billing/billing.njk" %}
-						{% include "../../components/order-controls/order-controls.njk" %}
-				</section>
-				<section class="main__basket">
-						{% include "../../components/products/products.njk" %}
-				</section>
+		<main class="main">
+				<div class="main__inner container">
+						<section>
+								{{ steps({activeItem: 3, steps: [{title: 'Account'}, {title: 'Shipping'}, {title: 'Billing'}, {title: 'Review'}]}) }}
+								{% include "../../components/billing/billing.njk" %}
+								{% include "../../components/order-controls/order-controls.njk" %}
+						</section>
+						<section class="main__basket">
+								{% include "../../components/products/products.njk" %}
+								{% if products | length %}
+										{% include "../../components/promo/promo.njk" %}
+								{% endif %}
+						</section>
+				</div>
 		</main>
 {% endblock content %}
