@@ -2,6 +2,7 @@
 @import 'constants';
 @import 'lib/base';
 @import 'fonts';
+@import 'typography';
 @import 'reset';
 @import 'global';
 @import 'layout';
@@ -23,5 +24,7 @@
 @import '../../components/base/checkbox/checkbox.scss';
 @import '../../components/order-controls/order-controls.scss';
 @import '../../components/base/button/button.scss';
+@import '../../components/products/products.scss';
+@import '../../components/product/product.scss';
 // ======= PAGES =======
 @import 'pages/main';

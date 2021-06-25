@@ -1,0 +1,29 @@
+{% macro product(props) %}
+		<div class="product">
+				<button class="product__remove">
+						<span class="sr-only">Remove item from the basket</span>
+				</button>
+				<figure class="product__figure">
+						<picture>
+								<source media="(-webkit-min-device-pixel-ratio: 1.5)" srcset="{{props.image.2x}}"/>
+								<img class="product__image" src="{{props.image.1x}}" alt="{{props.image.alt}}"/>
+						</picture>
+						<figcaption class="product__caption">
+								{{props.title}}
+						</figcaption>
+				</figure>
+				<div class="product__settings">
+						<div class="product__controls">
+								<button class="product__control">
+										<span class="sr-only">Decrese</span></button>
+								<span class="product__amount">1</span>
+								<button class="product__control product__control--increase">
+										<span class="sr-only">Increse</span></button>
+						</div>
+						<div class="product__price">
+								<span>$</span>
+								<span class="product__total">{{props.price}}</span>
+						</div>
+				</div>
+		</div>
+{% endmacro %}

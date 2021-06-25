@@ -25,14 +25,24 @@
 			"path": "#"
 		}
 	],
-	"someData": [
+	"products": [
 		{
-			"title": "Item 1",
-			"text": "Desc 1"
+			"image": {
+				"1x": "/assets/images/uploads/1x-image1.jpg",
+				"2x": "/assets/images/uploads/2x-image1.jpg",
+				"alt": "Super cool jacket"
+			},
+			"title": "Amet minim mollit non deserunt ullamco est sit",
+			"price": 525
 		},
 		{
-			"title": "Item 2",
-			"text": "Desc 2"
+			"image": {
+				"1x": "/assets/images/uploads/1x-image2.jpg",
+				"2x": "/assets/images/uploads/2x-image2.jpg",
+				"alt": "Nice sneakers"
+			},
+			"title": "Amet minim mollit non",
+			"price": 525
 		}
 	]
 }

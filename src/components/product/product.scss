@@ -1,0 +1,143 @@
+.product {
+	--image-size: 100px;
+	--product-offset-right: 65px;
+	--product-offset-left: var(--image-size);
+	--column-gap: 10px;
+	position: relative;
+	padding-right: var(--product-offset-right);
+}
+.product__figure {
+	display: grid;
+	grid-template-columns: var(--product-offset-left) 1fr;
+	column-gap: var(--column-gap);
+}
+.product__image {
+	--size: var(--image-size);
+	width: var(--size);
+	height: var(--size);
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+.product__caption {
+	--caption-offset-bottom: 15px;
+	padding-bottom: calc(var(--product-offset-left) / 2 + var(--caption-offset-bottom));
+	max-width: 154px;
+	overflow-wrap: break-word;
+}
+
+.product__settings {
+	--control-size: 20px;
+	position: absolute;
+	height: var(--control-size);
+	left: calc(var(--product-offset-left) + var(--column-gap));
+	right: var(--product-offset-right);
+	bottom: calc(var(--image-size) / 2 - var(--control-size));
+}
+
+.product__control {
+	--color: black;
+	position: relative;
+	width: var(--control-size);
+	height: var(--control-size);
+	border: 1px solid var(--color);
+	border-radius: 50%;
+	background: white;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 60%;
+		height: 1px;
+		background: var(--color);
+	}
+	&::before {
+		content: '';
+		transform: translate(-50%, -50%);
+	}
+
+	&:hover {
+		--color: #{$secondary};
+	}
+	&:active {
+		--color: #{rgba($secondary, 0.3)};
+	}
+}
+.product__control--increase {
+	&::after {
+		content: '';
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+.product__settings {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.product__controls {
+	display: flex;
+	align-items: center;
+}
+
+.product__amount {
+	width: 43px;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.product__price {
+	min-width: 0;
+	padding-left: 15px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.product__remove {
+	--color: #{$secondary};
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 18px;
+	height: 18px;
+	border: none;
+	background: white;
+	cursor: pointer;
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(var(--rotate));
+		width: 100%;
+		height: 1px;
+		background-color: var(--color);
+	}
+
+	&::before {
+		--rotate: 45deg;
+	}
+
+	&::after {
+		--rotate: -45deg;
+	}
+
+	&:hover {
+		--color: black;
+	}
+
+	&:active {
+		--color: #{rgba($secondary, 0.8)};
+	}
+}
