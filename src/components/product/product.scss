@@ -65,6 +65,10 @@
 	&:active {
 		--color: #{rgba($secondary, 0.3)};
 	}
+	&:disabled {
+		--color: #{$secondary};
+		pointer-events: none;
+	}
 }
 .product__control--increase {
 	&::after {

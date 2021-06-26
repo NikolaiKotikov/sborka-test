@@ -1,7 +1,7 @@
 {% from "../product/product.njk" import product %}
 <div class="products basket-inner">
 		<h2 class="products__title h2">My basket</h2>
-		<ul class="products__list">
+		<ul data-target="products-list" class="products__list">
 				{% for item in products %}
 						<li>
 								{{product(item)}}

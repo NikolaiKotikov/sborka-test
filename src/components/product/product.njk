@@ -1,6 +1,6 @@
 {% macro product(props) %}
-		<div class="product">
-				<button class="product__remove">
+		<div class="product" data-target="product">
+				<button data-target="remove" class="product__remove">
 						<span class="sr-only">Remove item from the basket</span>
 				</button>
 				<figure class="product__figure">
@@ -14,15 +14,15 @@
 				</figure>
 				<div class="product__settings">
 						<div class="product__controls">
-								<button class="product__control">
+								<button data-target="control-decrease" class="product__control">
 										<span class="sr-only">Decrese</span></button>
-								<span class="product__amount">1</span>
-								<button class="product__control product__control--increase">
+								<span data-target="amount" class="product__amount">1</span>
+								<button data-target="control-increase" class="product__control product__control--increase">
 										<span class="sr-only">Increse</span></button>
 						</div>
 						<div class="product__price">
 								<span>$</span>
-								<span class="product__total">{{props.price}}</span>
+								<span data-target="price" class="product__total">{{props.price}}</span>
 						</div>
 				</div>
 		</div>

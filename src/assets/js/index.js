@@ -25,12 +25,18 @@ class ProjectApp {
 		};
 		this.components = {
 			burger: require('../../components/burger/burger').default,
+			products: require('../../components/products/products').default,
+			result: require('../../components/result/result').default,
+			basket: require('../../components/basket/basket').default,
 		};
 		this.helpers = {};
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
 			this.components.burger.init();
+			this.components.products.init();
+			this.components.result.init();
+			this.components.basket.init();
 		});
 	}
 }
