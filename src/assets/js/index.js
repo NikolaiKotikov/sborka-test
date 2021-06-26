@@ -13,6 +13,7 @@ global.gsap = gsap;
 
 gsap.defaults({
 	overwrite: 'auto',
+	duration: 0.3,
 });
 
 class ProjectApp {
@@ -22,11 +23,14 @@ class ProjectApp {
 		this.classes = {
 			Signal: require('./classes/Signal').default,
 		};
-		this.components = {};
+		this.components = {
+			burger: require('../../components/burger/burger').default,
+		};
 		this.helpers = {};
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+			this.components.burger.init();
 		});
 	}
 }

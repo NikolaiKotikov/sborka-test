@@ -1,5 +1,5 @@
 {% macro menu(props) %}
-		<nav class="menu {% if props.className %} {{ props.className }}{% endif %}">
+		<nav id="menu" class="menu {% if props.className %} {{ props.className }}{% endif %}">
 				{% for item in menuItems %}
 						<a href="{{ item.path }}" class="menu__item">{{ item.name }}</a>
 				{% endfor %}
