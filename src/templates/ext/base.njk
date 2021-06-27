@@ -10,6 +10,9 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
 				{{ headScripts() }}
+				{% block scripts %}
+						<script src="assets/js/bundle.js?hash" defer></script>
+				{% endblock scripts %}
 
 				{% block stylesheets %}
 						<link rel="stylesheet" href="assets/css/styles.css?hash"/>
@@ -20,8 +23,5 @@
 
 				{% block content %}{% endblock content %}
 
-				{% block scripts %}
-						<script src="assets/js/bundle.js?hash"></script>
-				{% endblock scripts %}
 		</body>
 </html>
