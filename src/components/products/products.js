@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 const utils = require('../../assets/js/utils/utils').default;
 
 const products = document.querySelectorAll('[data-target="product"]');
@@ -24,12 +25,10 @@ export default {
 			if (operator === '+') {
 				updatedAmount = amountTotal + 1;
 				updatedPrice = itemTotal + ITEM_PRICE;
-				// eslint-disable-next-line no-use-before-define
 				dispatchPriceChange(ITEM_PRICE, operator);
 			} else if (operator !== '+' && itemTotal > 0) {
 				updatedAmount = amountTotal - 1;
 				updatedPrice = itemTotal - ITEM_PRICE;
-				// eslint-disable-next-line no-use-before-define
 				dispatchPriceChange(ITEM_PRICE, operator);
 			} else {
 				updatedAmount = 0;
@@ -59,6 +58,9 @@ export default {
 		function removeProduct() {
 			const amount = utils.convertToNumber(priceElement.innerHTML);
 			dispatchPriceChange(amount, '-');
+			removeButton.removeEventListener('click', removeProduct);
+			increaseElement.removeEventListener('click', increasePrice);
+			decreaseElement.removeEventListener('click', decreasePrice);
 			product.closest('li').remove();
 			dispatchRemove();
 			const productsList = document.querySelectorAll('[data-target="product"]');
